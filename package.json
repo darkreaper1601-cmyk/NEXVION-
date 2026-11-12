@@ -1,0 +1,55 @@
+{
+  "name": "nexvion-desktop",
+  "version": "1.0.0",
+  "description": "NEXVION Universal Game Launcher - Desktop Edition",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "build:mac": "electron-builder --mac"
+  },
+  "keywords": [
+    "nexvion",
+    "game-launcher",
+    "emulator-frontend",
+    "electron"
+  ],
+  "author": "NEXVION",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^31.0.0",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.nexvion.launcher",
+    "productName": "NEXVION",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "../shared/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Game"
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.games"
+    }
+  }
+}

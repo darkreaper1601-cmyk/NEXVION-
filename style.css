@@ -1,0 +1,275 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: #090814;
+  color: #f3f4f6;
+  padding-bottom: 40px;
+}
+
+.mobile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 18px;
+  background: #100d24;
+  border-bottom: 1px solid #2b2754;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.brand h1 {
+  font-size: 18px;
+  letter-spacing: 1.2px;
+}
+
+.brand p {
+  font-size: 9px;
+  color: #a78bfa;
+}
+
+.mobile-tabs {
+  display: flex;
+  background: #121026;
+  border-bottom: 1px solid #2b2754;
+}
+
+.m-tab {
+  flex: 1;
+  background: none;
+  border: none;
+  color: #9ca3af;
+  padding: 12px 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.m-tab.active {
+  color: #fff;
+  border-bottom: 2px solid #7c3aed;
+}
+
+.mobile-main {
+  padding: 16px;
+}
+
+.m-view {
+  display: none;
+}
+
+.m-view.active {
+  display: block;
+}
+
+.empty-box, .card {
+  background: #121026;
+  border: 1px solid #2b2754;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 14px;
+}
+
+.empty-box {
+  text-align: center;
+  padding: 44px 18px;
+}
+
+.empty-box .icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.empty-box h2 {
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+
+.empty-box p, .muted {
+  color: #9ca3af;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.steps {
+  padding-left: 18px;
+  margin: 10px 0;
+  color: #d1d5db;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.note {
+  font-size: 12px;
+  color: #fcd34d;
+  background: rgba(245, 158, 11, 0.12);
+  padding: 10px;
+  border-radius: 8px;
+  margin-top: 8px;
+}
+
+.btn {
+  padding: 10px 14px;
+  border-radius: 9px;
+  border: none;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: #fff;
+}
+
+.btn.secondary {
+  background: #1a1736;
+  border: 1px solid #2b2754;
+  color: #fff;
+}
+
+.btn.danger {
+  background: rgba(239, 68, 68, 0.2);
+  border: 1px solid #ef4444;
+  color: #fca5a5;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.m-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.m-game-card {
+  background: #121026;
+  border: 1px solid #2b2754;
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.m-thumb {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2e1065, #1e3a8a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+
+.m-game-body {
+  flex: 1;
+}
+
+.m-game-title {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.m-game-sub {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 4px 0 8px;
+}
+
+.sheet {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 4, 12, 0.85);
+  display: flex;
+  align-items: flex-end;
+  z-index: 40;
+}
+
+.sheet-card {
+  background: #121026;
+  border-top: 1px solid #2b2754;
+  border-radius: 18px 18px 0 0;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  background: #090814;
+  border: 1px solid #2b2754;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.file-picker {
+  display: block;
+  background: #1a1736;
+  border: 1px dashed #7c3aed;
+  padding: 14px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.file-picker input {
+  display: none;
+}
+
+.sheet-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.badge {
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.status-GREEN { background: rgba(16, 185, 129, 0.25); color: #6ee7b7; border: 1px solid #10b981; }
+.status-YELLOW { background: rgba(245, 158, 11, 0.25); color: #fcd34d; border: 1px solid #f59e0b; }
+.status-RED { background: rgba(239, 68, 68, 0.25); color: #fca5a5; border: 1px solid #ef4444; }
+
+.specs {
+  background: #090814;
+  border: 1px solid #2b2754;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
